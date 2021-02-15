@@ -9,6 +9,11 @@
     "test": "jest",
     "coverage": "jest --coverage"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scheletro/element.git"
@@ -23,6 +28,7 @@
     "@rollup/plugin-typescript": "^8.1.1",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.27",
+    "husky": "^5.0.9",
     "jest": "^26.6.3",
     "rollup": "^2.38.3",
     "rollup-plugin-node-resolve": "^5.2.0",
