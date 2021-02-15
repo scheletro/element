@@ -8,7 +8,27 @@
 </head>
 
 <body>
+    <script type="module">
+        import { div, span } from '../bundled/element.esm.js';
 
+        let _target;
+
+        const container = div(
+            {
+                style: {
+                    'text-align': 'center'
+                },
+                ref: (dom) => {
+                    console.warn('dom', dom);
+                    _target = dom;
+                    window.__target__ = _target;
+                }
+            },
+            span('This is Element, Welcome To you !!!')
+        );
+
+        document.body.appendChild(container);
+    </script>
 </body>
 
 </html>

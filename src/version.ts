@@ -1,3 +1,1 @@
-const config = require('../packages.json');
-
-export const version = config.version;
+export const version = '0.0.1';
