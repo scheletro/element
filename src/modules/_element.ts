@@ -1,9 +1,9 @@
 import { VNode } from '../interfaces';
 
-function _element(tag: string, node?: VNode) {
+function _element(tag: string, node?: VNode): HTMLElement {
     const { attributes, dataset, style, ref } = node || {};
 
-    const dom = document.createElement(tag);
+    const dom = document.createElement((tag).toLocaleLowerCase());
 
     if (attributes) {
         Object.entries(attributes).forEach(([key, value]) => {
@@ -32,7 +32,7 @@ function _element(tag: string, node?: VNode) {
 
 }
 
-export function element(tag: string, ...args: Array<VNode | string | number | HTMLElement>) {
+export function element(tag: string, ...args: Array<VNode | string | number | HTMLElement>): HTMLElement {
     let elements = args;
     let _cache: VNode = {};
 

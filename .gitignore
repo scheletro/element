@@ -9,3 +9,7 @@ yarn.lock
 bin
 
 bundled
+
+## the test file
+
+coverage

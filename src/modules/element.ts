@@ -55,7 +55,7 @@ export function img(...args: Array<VNode | string | number | HTMLElement>) {
     return container;
 }
 
-export function canvas(...args: Array<VNode | string | number | HTMLElement>) {
-    const container = element('canvas', ...args);
+export function canvas(...args: Array<VNode | string | number | HTMLElement>): HTMLCanvasElement {
+    const container = element('canvas', ...args) as HTMLCanvasElement;
     return container;
 }
